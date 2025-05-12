@@ -13,7 +13,7 @@ class MnistData:
         self._read_images(images_path)
         self._read_labels(labels_path)
 
-    def get_split_data(self, validation_percent: float = 0.2, seed: int = 42) -> Tuple[List[Tuple[np.ndarray, np.ndarray]], List[Tuple[np.ndarray, np.ndarray]]]:
+    def get_split_data(self, validation_percent: float = 0.1, seed: int = 42) -> Tuple[List[Tuple[np.ndarray, np.ndarray]], List[Tuple[np.ndarray, np.ndarray]]]:
         if not 0.0 < validation_percent < 1.0:
             raise ValueError("val_ratio must be between 0 and 1.")
 
